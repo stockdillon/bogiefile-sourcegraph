@@ -1,0 +1,27 @@
+# -*- mode: yaml -*-
+# vim: set filetype=yaml
+# atom: set grammar=yaml
+---
+pipeline:
+  managed: true
+  flavor: devnav/docker
+  feature_toggles:
+    disable_default_environment_names: true
+    code_analysis:
+      sonar:
+        hostUrl: https://sonar-old.cloud.capitalone.com
+        skip: false
+      eratocode:
+        skip: false
+      pr_branch:
+        sonar:
+          hostUrl: https://sonar-old.cloud.capitalone.com
+          skip: false
+        eratocode:
+          skip: true
+      feature_branch:
+        sonar:
+          hostUrl: https://sonar-old.cloud.capitalone.com
+          skip: false
+        eratocode:
+          skip: false
